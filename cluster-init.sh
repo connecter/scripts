@@ -15,7 +15,9 @@ gcloud compute project-info add-metadata --metadata-from-file sshKeys=/tmp/keys
 
 #gcloud config list -all
 
-#gcloud compute instances create core1 --image https://www.googleapis.com/compute/v1/projects/coreos-cloud/global/images/coreos-stable-522-6-0-v20150128 --machine-type g1-small --metadata-from-file user-data=cloud-config.yaml
+gcloud compute instances create core1 --image https://www.googleapis.com/compute/v1/projects/coreos-cloud/global/images/coreos-stable-522-6-0-v20150128 --machine-type g1-small --address coreosip --metadata-from-file user-data=cloud-config.yaml
+
+gcloud compute instances list
 
 #
 #gcloud compute instances delete core1
